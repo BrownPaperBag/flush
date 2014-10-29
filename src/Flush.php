@@ -2,19 +2,41 @@
 
 namespace BrownPaperBag;
 
+/**
+ * Class Flush
+ * @package BrownPaperBag
+ */
 class Flush{
 
-    public $contentType = null;
+    /**
+     * @var string
+     */
+    public $contentType = '';
+    /**
+     * @var bool
+     */
     public $enableLimbo = false;
+    /**
+     * @var bool
+     */
     public $isPrepared = false;
 
-    public function __construct($contentType = null, $enableLimbo = false){
+    /**
+     * @param string $contentType
+     * @param bool $enableLimbo
+     */
+    public function __construct($contentType = '', $enableLimbo = false){
 
         $this->contentType = $contentType;
         $this->enableLimbo = $enableLimbo;
 
     }
 
+    /**
+     * @param string $data
+     * @param bool $prepare
+     * @return $this
+     */
     public function data($data, $prepare = false){
 
         echo $data;
@@ -30,8 +52,14 @@ class Flush{
 
         }
 
+        return $this;
+
     }
 
+    /**
+     * @param bool $end_flush
+     * @return Flush
+     */
     public function dump($end_flush = false){
 
         if($end_flush){
@@ -43,8 +71,15 @@ class Flush{
         @ob_flush();
         @flush();
 
+        return $this;
+
     }
 
+    /**
+     * @param string $data
+     * @param bool $prepare
+     * @return Flush
+     */
     public function json($data, $prepare = null){
 
         if(is_null($prepare) && $this->enableLimbo){
@@ -57,6 +92,9 @@ class Flush{
 
     }
 
+    /**
+     * @return Flush
+     */
     public function prepare(){
 
         if($this->contentType){
@@ -91,8 +129,13 @@ class Flush{
 
         $this->isPrepared = true;
 
+        return $this;
+
     }
 
+    /**
+     * @return Flush
+     */
     public function signal(){
 
         return $this->data(chr(32));
