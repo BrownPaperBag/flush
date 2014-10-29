@@ -134,11 +134,13 @@ class Flush{
     }
 
     /**
-     * @return Flush
+     * @return bool
      */
     public function signal(){
 
-        return $this->data(chr(32));
+        $this->data(chr(32));
+
+        return $this->enableLimbo || !connection_aborted();
 
     }
 
