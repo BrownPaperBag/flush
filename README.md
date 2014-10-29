@@ -1,12 +1,12 @@
 Flush
 =====
 
-Library to flush data friendly. To use in long-pooling and zombie requests.
+Library to flush data friendly. To use in long-polling and zombie requests.
 
 Usage
 -----
 
-Usage in long-pooling requests:
+Usage in long-polling requests:
 ```php
 <?php
 
