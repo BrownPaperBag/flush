@@ -49,8 +49,6 @@ $flush = new Flush();
 $flush->contentType = 'application/json'; // Optional
 $flush->enableLimbo = true; // Required for zombie requests
 
-$flush->prepare();
-
 // Doing whatever task that user must to wait...
 
 $flush->json(array(
