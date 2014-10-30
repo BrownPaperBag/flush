@@ -133,11 +133,11 @@ $flush->setLimboEnabled(true); // Required for zombie requests
 
 // Doing whatever task that user must to wait...
 
-$flush->json(array( // If limbo is enabled don't use prepare and json methods in the same script.
+$flush->json(array( // If limbo is enabled Flush will prepare() automatically.
 
     'message' => 'An awesome return message here...'
 
-));
+)); // To prevent prepare(), for any reason, just pass an explicit false as second argument in json/data().
 
 // From this moment you can execute any task in background like: render a PDF, send emails or fire some slow script.
 // Just avoid to create an infinite loop :)
