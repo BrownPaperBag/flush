@@ -119,28 +119,31 @@ class Flush{
 
         }
 
+        ini_set('implicit_flush', false);
         ini_set('output_buffering', false);
         ini_set('zlib.output_compression', false);
 
-        $this->dump(true);
+        ob_implicit_flush(false);
 
-        ini_set('implicit_flush', true);
-        ob_implicit_flush(true);
-
-        $this->isPrepared = true;
+        $this->isPrepared = (bool) $this->dump(true);
 
         return $this;
 
     }
 
     /**
+     * @param bool $send
      * @return bool
      */
-    public function signal(){
+    public function signal($send = true){
 
-        $this->data(chr(32));
+        if($send){
 
-        return $this->enableLimbo || !connection_aborted();
+            $this->data(chr(32));
+
+        }
+
+        return $send && !connection_aborted();
 
     }
 
