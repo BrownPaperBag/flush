@@ -128,8 +128,8 @@ request.send();
 
 $flush = new Flush();
 
-$flush->contentType = 'application/json'; // Optional
-$flush->enableLimbo = true; // Required for zombie requests
+$flush->setContentType('application/json'); // Optional
+$flush->setLimboEnabled(true); // Required for zombie requests
 
 // Doing whatever task that user must to wait...
 
