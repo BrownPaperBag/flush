@@ -40,6 +40,8 @@ $flush->json(array(
 ### Usage in long-polling requests with socket style
 
 ```php
+<?php
+
 $flush = new Flush('application/json');
 
 $flush->prepare();
