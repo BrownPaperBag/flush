@@ -1,9 +1,14 @@
-Presentation
-============
+# Presentation
+
 Library to flush data friendly. To use in long-polling and zombie requests.
 
 ## Usage
------
+
+This library was built to work in three scenarios basically:
+
+* Long-polling requests;
+* Long polling requests with socket style;
+* Zombie requests;
 
 ### Usage in long-polling requests
 ```php
@@ -138,7 +143,6 @@ $flush->json(array(
 // Just avoid to create an infinite loop :)
 ```
 
-License
-----
+# License
 
 MIT
