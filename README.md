@@ -133,7 +133,7 @@ $flush->setLimboEnabled(true); // Required for zombie requests
 
 // Doing whatever task that user must to wait...
 
-$flush->json(array(
+$flush->json(array( // If limbo is enabled don't use prepare and json methods in the same script.
 
     'message' => 'An awesome return message here...'
 
