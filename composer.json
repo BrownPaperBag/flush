@@ -1,7 +1,7 @@
 {
     "name": "brownpaperbag/flush",
-    "description": "Library to flush data friendly. To use in long-pooling and zombie requests.",
-    "keywords": ["flush", "long-pooling", "zoobie", "chunked", "requests"],
+    "description": "Library to flush data friendly. To use in long-polling and zombie requests.",
+    "keywords": ["flush", "long-polling", "zoobie", "chunked", "requests"],
     "license": "MIT",
     "authors": [
         {
