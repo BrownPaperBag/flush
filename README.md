@@ -1,6 +1,5 @@
-# Flush
-=====
-
+Presentation
+============
 Library to flush data friendly. To use in long-polling and zombie requests.
 
 ## Usage
