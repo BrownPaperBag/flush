@@ -1,6 +1,12 @@
 # Presentation
 
-Library to flush data friendly. To use in long-polling and zombie requests.
+Library to flush data friendly. To use in long-polling and zombie requests. Distributed as [composer](http://getcomposer.org/) package.
+
+## Instalation
+
+```bash
+composer require brownpaperbag/flush
+```
 
 ## Usage
 
