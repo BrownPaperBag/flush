@@ -1,6 +1,6 @@
 # Presentation
 
-Library to flush data friendly. To use in long-polling and zombie requests. Distributed as [composer](http://getcomposer.org/) package.
+Library to flush data friendly. To use in long-polling and zombie requests. Distributed as a [composer](http://getcomposer.org/) package.
 
 ## Instalation
 
@@ -102,7 +102,7 @@ request.onreadystatechange = function(){
                     length = data.length;
 
                 data = data.slice(this.lastLength - length);
-                data = $.trim(data);
+                data = data.trim(data);
                 
                 this.lastLength = length;
 
