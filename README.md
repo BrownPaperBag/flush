@@ -20,6 +20,8 @@ This library was built to work in three scenarios basically:
 ```php
 <?php
 
+use BrownPaperBag\Flush;
+
 $flush = new Flush('application/json');
 
 $flush->prepare();
@@ -51,6 +53,8 @@ $flush->json(array(
 
 ```php
 <?php
+
+use BrownPaperBag\Flush;
 
 $flush = new Flush('application/json');
 
@@ -128,6 +132,8 @@ request.send();
 ### Usage in zombie requests
 ```php
 <?php
+
+use BrownPaperBag\Flush;
 
 // You could use new Flush('application/json', true) instead of commands bellow.
 // Just showing another way...
