@@ -164,7 +164,7 @@ class Flush{
     }
 
     /**
-     * @return Flush
+     * @return array
      */
     public function getHeaders(){
 
