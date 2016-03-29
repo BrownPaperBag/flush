@@ -91,6 +91,14 @@ class Flush
      */
     public function data($data, $prepare = false)
     {
+        if (
+            defined('APPLICATION_OPTION_FLUSH_FORCE_OB_START')
+            &&
+            APPLICATION_OPTION_FLUSH_FORCE_OB_START
+        ) {
+            ob_start();
+        }
+
         echo $data;
 
         if ($this->isPrepared) {
